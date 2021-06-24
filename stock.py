@@ -39,8 +39,7 @@ class Stock(object):
         '''
         #TODO
         info = self.yfinancial.get_historical_price_data(start_date, end_date, 'daily')
-        self.ohlcv_df = pd.DataFrame(info)
-        print(self.ohlcv_df)
+        self.ohlcv_df = pd.DataFrame(info[self.symbol]['prices'])
         #end TODO
         
     def calc_returns(self):
@@ -188,14 +187,8 @@ def _test():
     print(shares_out)
     start_date = '2019-08-06'
     end_date = '2020-08-06'
-    #data = stock.get_daily_hist_price(start_date, end_date)
-    cash = stock.get_cash_and_cash_equivalent()
-    print(cash)
-    debt = stock.get_total_debt()
-    print(debt)
-    #stock.calc_returns()
-    #print(stock.ohlcv_df())
-    
+    stock.get_daily_hist_price(start_date, end_date)    
+
 
 
 
