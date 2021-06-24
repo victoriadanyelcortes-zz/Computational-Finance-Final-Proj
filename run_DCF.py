@@ -3,7 +3,7 @@
 @Instructor    : Dr. Alex Pang
 @Date          : June 2021
 
-@Student Name  : first last
+@Student Name  : Victoria Cortes
 
 '''
 
