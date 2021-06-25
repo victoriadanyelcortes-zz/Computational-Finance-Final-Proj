@@ -58,8 +58,6 @@ class Stock(object):
         current debt = total current liabilities - accounts payables - other current liabilities (ignoring current deferred liabilities)
         '''
         result = None
-        current_debt = None
-        long_term_debt = None
         # TODO
         try:
             result = self.yfinancial.get_total_current_liabilities()
@@ -81,7 +79,6 @@ class Stock(object):
         except:
             print("No long term debt")
         
-        #result = long_term_debt + current_debt
         # end TODO
         return(result)
 
