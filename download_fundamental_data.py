@@ -52,11 +52,11 @@ def download_fundamental_data(input_file_name, output_file_name):
         try:
             total_debt = total_debt - yfinance.get_account_payable()
         except:
-            print("je")
+            print("No accounts payable")
         try:
             total_debt = total_debt - yfinance.get_other_current_liabilities()
         except:
-            print("none")
+            print("No other current liabilities")
             
         try:
             total_debt += yfinance.get_long_term_debt()
